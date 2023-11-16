@@ -17,7 +17,7 @@ export class FormGetComponent {
   getValue() {}
   peoples: People[] = [];
   constructor(private http: HttpClient) {
-    this.http.get<People[]>(`/api/product`).subscribe((response) => {
+    this.http.get<People[]>(`/api/people`).subscribe((response) => {
       this.peoples = response;
       this.filteredProducts = this.peoples;
     });
